@@ -20,9 +20,9 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <PointDrawer.h>
-#include <TuioServer.h>
-#include <TuioCursor.h>
+#include "PointDrawer.h"
+#include "TuioServer.h"
+#include "TuioCursor.h"
 using namespace TUIO;
 
 class PointDrawerTUIO : public XnVPointDrawer
