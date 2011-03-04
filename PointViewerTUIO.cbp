@@ -5,6 +5,7 @@
 		<Option title="PointViewerTUIO" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="src/;TUIO/;oscpack/;oscpack/osc/;oscpack/ip/;oscpack/ip/posix/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/PointViewerTUIO" prefix_auto="1" extension_auto="1" />
@@ -30,7 +31,126 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-DXN_SSE" />
+			<Add option="-DOSC_HOST_LITTLE_ENDIAN" />
+			<Add directory="TUIO_CPP/TUIO" />
+			<Add directory="TUIO_CPP/oscpack" />
+			<Add directory="/usr/include/nite" />
+			<Add directory="/usr/include/ni" />
 		</Compiler>
+		<Linker>
+			<Add library="glut" />
+			<Add library="OpenNI" />
+			<Add library="XnVNite" />
+		</Linker>
+		<Unit filename="PointDrawer.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="PointDrawer.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="PointDrawerTUIO.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="PointDrawerTUIO.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioClient.cpp">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioClient.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioContainer.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioCursor.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioListener.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioObject.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioPoint.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioServer.cpp">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioServer.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioTime.cpp">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/TUIO/TuioTime.h">
+			<Option virtualFolder="TUIO/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/IpEndpointName.cpp">
+			<Option virtualFolder="oscpack/ip/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/IpEndpointName.h">
+			<Option virtualFolder="oscpack/ip/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/NetworkingUtils.h">
+			<Option virtualFolder="oscpack/ip/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/PacketListener.h">
+			<Option virtualFolder="oscpack/ip/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/TimerListener.h">
+			<Option virtualFolder="oscpack/ip/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/UdpSocket.h">
+			<Option virtualFolder="oscpack/ip/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/posix/NetworkingUtils.cpp">
+			<Option virtualFolder="oscpack/ip/posix/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/ip/posix/UdpSocket.cpp">
+			<Option virtualFolder="oscpack/ip/posix/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/MessageMappingOscPacketListener.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscException.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscHostEndianness.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscOutboundPacketStream.cpp">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscOutboundPacketStream.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscPacketListener.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscPrintReceivedElements.cpp">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscPrintReceivedElements.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscReceivedElements.cpp">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscReceivedElements.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscTypes.cpp">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="TUIO_CPP/oscpack/osc/OscTypes.h">
+			<Option virtualFolder="oscpack/osc/" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
